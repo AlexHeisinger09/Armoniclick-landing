@@ -18,10 +18,13 @@ export function Hero() {
     <section
       className="min-h-screen w-full px-3 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-12 sm:pb-20 relative overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: isMobile ? 'url(/armoni-fondo-movil.webp)' : 'url(/armoni-fondo-triangu.webp)',
+        backgroundImage: isMobile
+          ? 'url(/armoni-fondo-movil.webp)'
+          : 'url(/armoni-fondo-triangu.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: isMobile ? 'scroll' : 'fixed'
+        backgroundAttachment: isMobile ? 'scroll' : 'fixed',
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div className="max-w-6xl mx-auto w-full">
