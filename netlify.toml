@@ -1,8 +1,23 @@
+# Netlify Configuration for ArmoniClick Landing Page
+
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
 
+# Redirect all routes to index.html for React Router
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Cache settings for assets
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
