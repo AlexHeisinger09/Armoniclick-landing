@@ -1,0 +1,146 @@
+═══════════════════════════════════════════════════════════════════════════════
+  🚀 CÓMO ABRIR Y USAR EL LANDING PAGE
+═══════════════════════════════════════════════════════════════════════════════
+
+📍 UBICACIÓN DEL PROYECTO:
+C:\MisProyectosReact\ArmoniClick-landing
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚡ INICIO RÁPIDO (3 PASOS):
+
+1. Abre terminal/CMD en la carpeta del proyecto:
+   cd C:\MisProyectosReact\ArmoniClick-landing
+
+2. Corre en desarrollo:
+   npm run dev
+
+3. Abre tu navegador:
+   http://localhost:5173
+
+¡Listo! Ya puedes ver el landing page en vivo.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 PARA EDITAR LOS ARCHIVOS:
+
+Abre con VS Code:
+- Click derecho en la carpeta → "Abrir con Code"
+- O: File → Open Folder → C:\MisProyectosReact\ArmoniClick-landing
+
+Los archivos a editar:
+- src/sections/Hero.tsx         → Título y descripción principal
+- src/sections/Features.tsx     → Características (6 items)
+- src/sections/Pricing.tsx      → Planes y precios
+- src/components/Footer.tsx     → Email, teléfono, contacto
+- tailwind.config.js            → Colores de marca
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎨 CAMBIOS COMUNES:
+
+1. CAMBIAR EMAIL:
+   Busca en Footer.tsx y CTA.tsx
+   info@armoniclick.com → tu-email@ejemplo.com
+
+2. CAMBIAR COLORES:
+   Abre tailwind.config.js
+   Edita: primary, secondary, accent
+
+3. CAMBIAR PRECIOS:
+   Abre src/sections/Pricing.tsx
+   Edita el array "plans"
+
+4. CAMBIAR TÍTULO:
+   Abre src/sections/Hero.tsx
+   Edita el <h1>
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📂 ESTRUCTURA:
+
+src/
+├── components/          → Navbar y Footer
+├── sections/            → Páginas principales (Hero, Features, etc)
+├── App.tsx             → Componente principal
+├── main.tsx            → Entrada React
+└── index.css           → Estilos
+
+public/                 → Archivos estáticos (logo, imágenes)
+dist/                   → Build compilado (se genera con: npm run build)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🛠️ COMANDOS:
+
+npm run dev             → Desarrollo con hot reload (http://localhost:5173)
+npm run build           → Compilar para producción
+npm run preview         → Ver el build compilado
+npm run lint            → Verificar errores de código
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🐛 SI HAY PROBLEMAS:
+
+❌ "El CSS no se ve"
+   → Reinicia: npm run dev
+   → Limpia caché: Ctrl+Shift+Delete
+   → Recarga: F5
+
+❌ "Error en terminal"
+   → Borra node_modules: rmdir node_modules /s /q
+   → Reinstala: npm install
+   → Intenta: npm run dev
+
+❌ "Los cambios no aparecen"
+   → Espera 1-2 segundos
+   → Recarga el navegador (F5)
+   → Revisa la terminal por errores
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📖 DOCUMENTACIÓN:
+
+- INICIO_RAPIDO.md              → Guía rápida
+- GUIA_PERSONALIZACION.md       → Cómo cambiar todo
+- ESTADO_PROYECTO.md            → Estado actual
+- PROYECTO_RESUMEN.txt          → Resumen técnico
+- README.md                     → Documentación general
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🌐 DEPLOY (CUANDO ESTÉ LISTO):
+
+Opción 1 - Netlify (recomendado):
+   1. Push a GitHub
+   2. Crea cuenta en netlify.com
+   3. Conecta tu repositorio
+   4. ¡Deploy automático!
+
+Opción 2 - Vercel:
+   1. Push a GitHub
+   2. Crea cuenta en vercel.com
+   3. Conecta tu repositorio
+   4. ¡Deploy automático!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST ANTES DE PUBLICAR:
+
+- [ ] Cambiar email/teléfono de prueba
+- [ ] Actualizar colores de marca
+- [ ] Cambiar contenido según tu negocio
+- [ ] Agregar logo real
+- [ ] Probar en mobile (F12 → Toggle device)
+- [ ] Verificar todos los links
+- [ ] npm run build (sin errores)
+- [ ] Hacer deploy
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 ¡YA ESTÁ TODO LISTO!
+
+Tu landing page está completa y lista para usar.
+Solo personaliza el contenido y ¡lanza tu página! 🚀
+
+═══════════════════════════════════════════════════════════════════════════════
