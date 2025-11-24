@@ -2,17 +2,23 @@ import { ArrowRight, Play } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 export function Hero() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
     }
 
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  const isMobile = windowSize.width < 768
+  const isLandscape = windowSize.width > windowSize.height
 
   return (
     <section
@@ -21,8 +27,8 @@ export function Hero() {
         backgroundImage: isMobile
           ? 'url(/armoni-fondo-movil.webp)'
           : 'url(/armoni-fondo-triangu.webp)',
-        backgroundSize: isMobile ? 'cover' : 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: isLandscape && isMobile ? 'auto 100%' : 'cover',
+        backgroundPosition: isLandscape && isMobile ? 'center center' : 'center center',
         backgroundAttachment: isMobile ? 'scroll' : 'fixed',
         backgroundRepeat: 'no-repeat'
       }}

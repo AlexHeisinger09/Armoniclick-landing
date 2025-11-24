@@ -115,3 +115,28 @@
     width: 100%;
   }
 }
+
+/* Background image optimization for different screen sizes */
+@media (max-width: 768px) {
+  section[style*="backgroundImage"] {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+/* Mobile landscape specific background optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  section[style*="backgroundImage"] {
+    background-size: auto 100% !important;
+    background-position: center center !important;
+  }
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
+  section[style*="backgroundImage"] {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+}
