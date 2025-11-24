@@ -20,15 +20,19 @@ export function Hero() {
   const isMobile = windowSize.width < 768
   const isLandscape = windowSize.width > windowSize.height
 
+  const getBackgroundImage = () => {
+    if (isMobile && isLandscape) return 'url(/armoni-fondo-movil-landscape.webp)'
+    if (isMobile) return 'url(/armoni-fondo-movil.webp)'
+    return 'url(/armoni-fondo-triangu.webp)'
+  }
+
   return (
     <section
       className="min-h-screen w-full relative overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: isMobile
-          ? 'url(/armoni-fondo-movil.webp)'
-          : 'url(/armoni-fondo-triangu.webp)',
-        backgroundSize: isLandscape && isMobile ? 'auto 100%' : 'cover',
-        backgroundPosition: isLandscape && isMobile ? 'center center' : 'center center',
+        backgroundImage: getBackgroundImage(),
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
         backgroundAttachment: isMobile ? 'scroll' : 'fixed',
         backgroundRepeat: 'no-repeat'
       }}

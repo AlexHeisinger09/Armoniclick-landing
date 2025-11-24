@@ -125,11 +125,13 @@
   }
 }
 
-/* Mobile landscape specific background optimization */
-@media (max-height: 500px) and (orientation: landscape) {
+/* Optimize background for all screen sizes */
+@media (max-width: 768px) and (orientation: landscape) {
   section[style*="backgroundImage"] {
-    background-size: auto 100% !important;
+    background-size: cover !important;
     background-position: center center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh;
   }
 }
 
@@ -138,5 +140,6 @@
   section[style*="backgroundImage"] {
     background-size: cover !important;
     background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 }
