@@ -21,8 +21,8 @@ export function Hero() {
         backgroundImage: isMobile
           ? 'url(/armoni-fondo-movil.webp)'
           : 'url(/armoni-fondo-triangu.webp)',
-        backgroundSize: isMobile ? 'contain' : 'cover',
-        backgroundPosition: isMobile ? 'right center' : 'center',
+        backgroundSize: isMobile ? 'cover' : 'cover',
+        backgroundPosition: 'center',
         backgroundAttachment: isMobile ? 'scroll' : 'fixed',
         backgroundRepeat: 'no-repeat'
       }}
@@ -36,12 +36,12 @@ export function Hero() {
               ✨ Solución líder en Chile
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Gestiona tu clínica dental con
               <span className="text-white"> ArmoniClick</span>
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
               Simplifica la administración de pacientes, citas, tratamientos y más. Aumenta tu productividad hasta un 40% con nuestra plataforma inteligente.
             </p>
 

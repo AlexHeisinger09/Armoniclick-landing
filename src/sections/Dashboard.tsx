@@ -13,9 +13,9 @@ export function Dashboard() {
         </div>
 
         {/* Dashboard Preview */}
-        <div className="relative">
-          <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-1 backdrop-blur-sm">
-            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+        <div className="relative overflow-hidden">
+          <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-1 backdrop-blur-sm overflow-hidden">
+            <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-2xl">
               {/* Mock Dashboard */}
               <div className="space-y-6">
                 {/* Header Bar */}
@@ -99,7 +99,7 @@ export function Dashboard() {
         </div>
 
         {/* Features List */}
-        <div className="mt-20 grid md:grid-cols-2 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Panel Intuitivo

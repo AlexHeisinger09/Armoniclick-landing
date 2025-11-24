@@ -46,11 +46,11 @@ export function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition"
+              className="bg-white rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
@@ -85,18 +85,18 @@ export function Testimonials() {
         </div>
 
         {/* Additional Stats */}
-        <div className="grid md:grid-cols-3 gap-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-12 text-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-8 sm:p-12 text-white">
           <div className="text-center">
-            <p className="text-4xl font-bold mb-2">4.9/5</p>
-            <p className="text-blue-100">Calificación promedio</p>
+            <p className="text-3xl sm:text-4xl font-bold mb-2">4.9/5</p>
+            <p className="text-sm sm:text-base text-blue-100">Calificación promedio</p>
           </div>
           <div className="text-center">
-            <p className="text-4xl font-bold mb-2">500+</p>
-            <p className="text-blue-100">Clínicas activas</p>
+            <p className="text-3xl sm:text-4xl font-bold mb-2">500+</p>
+            <p className="text-sm sm:text-base text-blue-100">Clínicas activas</p>
           </div>
           <div className="text-center">
-            <p className="text-4xl font-bold mb-2">98%</p>
-            <p className="text-blue-100">Tasa de retención</p>
+            <p className="text-3xl sm:text-4xl font-bold mb-2">98%</p>
+            <p className="text-sm sm:text-base text-blue-100">Tasa de retención</p>
           </div>
         </div>
       </div>

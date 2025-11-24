@@ -48,13 +48,13 @@ export function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <div
                 key={index}
-                className="group bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-blue-200 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg hover:border-blue-200 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-200 group-hover:to-cyan-200 transition">
                   <Icon className="text-blue-600" size={28} />

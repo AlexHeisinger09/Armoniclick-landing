@@ -66,18 +66,18 @@ export function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
           {plans.map((plan, index) => (
             <div
               key={index}
               className={`relative rounded-2xl transition-all duration-300 ${
                 plan.highlighted
-                  ? 'md:scale-105 bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-2xl'
+                  ? 'lg:scale-105 bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-2xl'
                   : 'bg-white border border-gray-200 hover:border-blue-200 hover:shadow-lg'
               }`}
             >
               <div
-                className={`rounded-2xl p-8 ${
+                className={`rounded-2xl p-6 sm:p-8 ${
                   plan.highlighted ? 'bg-white' : ''
                 }`}
               >

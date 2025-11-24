@@ -54,11 +54,11 @@ export function Benefits() {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon
             return (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition">
+              <div key={index} className="bg-white rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                   <Icon className="text-white" size={24} />
                 </div>
@@ -79,24 +79,24 @@ export function Benefits() {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2">
               40%
             </p>
-            <p className="text-gray-600">Aumento de productividad</p>
+            <p className="text-sm sm:text-base text-gray-600">Aumento de productividad</p>
           </div>
           <div className="text-center">
-            <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2">
               60%
             </p>
-            <p className="text-gray-600">Reducción de costos administrativos</p>
+            <p className="text-sm sm:text-base text-gray-600">Reducción de costos administrativos</p>
           </div>
           <div className="text-center">
-            <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500 mb-2">
               95%
             </p>
-            <p className="text-gray-600">Satisfacción de clientes</p>
+            <p className="text-sm sm:text-base text-gray-600">Satisfacción de clientes</p>
           </div>
         </div>
       </div>
