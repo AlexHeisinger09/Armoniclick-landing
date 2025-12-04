@@ -1,9 +1,11 @@
 import { ArrowRight, Mail } from 'lucide-react'
 import { useState } from 'react'
+import { DemoSignUpModal } from '../components/DemoSignUpModal'
 
 export function CTA() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -27,8 +29,15 @@ export function CTA() {
             Primer mes gratis, sin tarjeta de crédito.
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-6">
-            <div className="flex-1 relative">
+          <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-6">
+            <button
+              onClick={() => setIsDemoModalOpen(true)}
+              className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition flex items-center justify-center gap-2"
+            >
+              Crear demo gratis
+              <ArrowRight size={20} />
+            </button>
+            <form onSubmit={handleSubmit} className="flex-1 relative">
               <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
               <input
                 type="email"
@@ -38,15 +47,8 @@ export function CTA() {
                 className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
                 required
               />
-            </div>
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap"
-            >
-              Registrarse gratis
-              <ArrowRight size={20} />
-            </button>
-          </form>
+            </form>
+          </div>
 
           {submitted && (
             <p className="text-green-600 font-semibold animate-pulse">
@@ -94,6 +96,12 @@ export function CTA() {
             </a>
           </div>
         </div>
+
+        {/* Demo Sign Up Modal */}
+        <DemoSignUpModal
+          isOpen={isDemoModalOpen}
+          onClose={() => setIsDemoModalOpen(false)}
+        />
       </div>
     </section>
   )
