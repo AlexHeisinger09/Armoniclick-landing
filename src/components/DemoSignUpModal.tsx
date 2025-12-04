@@ -28,6 +28,21 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
+
+    // Validación del lado del cliente
+    if (!formData.name.trim()) {
+      setError('Por favor ingresa tu nombre')
+      return
+    }
+    if (!formData.lastName.trim()) {
+      setError('Por favor ingresa tu apellido')
+      return
+    }
+    if (!formData.email.trim()) {
+      setError('Por favor ingresa tu correo electrónico')
+      return
+    }
+
     setLoading(true)
 
     try {
@@ -35,23 +50,33 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
       // Nota: Usar www.armoniclick.cl para evitar redirects que rompen CORS preflight
       const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://www.armoniclick.cl/.netlify/functions'
 
+      const payload = {
+        name: formData.name.trim(),
+        lastName: formData.lastName.trim(),
+        email: formData.email.trim(),
+        trialDays: formData.trialDays,
+      }
+
+      console.log('📤 Enviando payload:', payload)
+      console.log('🌐 Backend URL:', backendUrl)
+
       const response = await fetch(`${backendUrl}/auth/demo`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          lastName: formData.lastName,
-          email: formData.email,
-          trialDays: formData.trialDays,
-        }),
+        body: JSON.stringify(payload),
       })
+
+      console.log('✅ Response status:', response.status)
 
       const data = await response.json()
 
+      console.log('📥 Response data:', data)
+
       if (!response.ok) {
         setError(data.message || 'Error al crear la cuenta de demostración')
+        setLoading(false)
         return
       }
 
@@ -70,7 +95,7 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
       }, 3000)
     } catch (err) {
       setError('Error de conexión. Por favor intenta de nuevo.')
-      console.error('Error:', err)
+      console.error('❌ Error:', err)
     } finally {
       setLoading(false)
     }
