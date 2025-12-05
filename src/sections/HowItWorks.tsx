@@ -26,14 +26,14 @@ export function HowItWorks() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F2F1E7]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-700 mb-4">
             ¿Cómo Funciona?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Comienza a usar ArmoniClick en 3 simples pasos
           </p>
         </div>
@@ -62,10 +62,10 @@ export function HowItWorks() {
 
                   {/* Content */}
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-2xl font-bold text-slate-700 mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed max-w-sm">
+                    <p className="text-slate-600 leading-relaxed max-w-sm font-medium">
                       {step.description}
                     </p>
                   </div>
@@ -77,11 +77,11 @@ export function HowItWorks() {
 
         {/* Bottom Info */}
         <div className="mt-16 text-center">
-          <div className="inline-block bg-cyan-100 rounded-2xl px-8 py-6">
-            <p className="text-cyan-900 font-semibold text-lg mb-2">
+          <div className="inline-block bg-white border-2 border-cyan-300 rounded-2xl px-8 py-6 shadow-lg">
+            <p className="text-slate-700 font-bold text-lg mb-2">
               ⏱️ Tiempo estimado de configuración: 15 minutos
             </p>
-            <p className="text-cyan-700">
+            <p className="text-slate-600 font-semibold">
               Nuestro equipo te acompaña en cada paso del proceso
             </p>
           </div>

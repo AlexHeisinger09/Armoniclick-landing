@@ -108,8 +108,8 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">
-            Prueba ArmoniClick
+          <h2 className="text-2xl font-bold text-slate-700">
+            Crea tu Cuenta de Demostración
           </h2>
           <button
             onClick={onClose}
@@ -134,13 +134,13 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
               Te hemos enviado un email a <strong>{formData.email}</strong>
             </p>
             <p className="text-sm text-gray-500">
-              Revisa tu correo para las credenciales de acceso. Tu prueba durará {formData.trialDays} días.
+              Revisa tu correo para las credenciales de acceso. Tu demo durará 15 días.
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <p className="text-gray-600 text-sm mb-6">
-              Crea tu cuenta de prueba gratuita por {formData.trialDays} días. Sin tarjeta de crédito requerida.
+            <p className="text-slate-600 text-sm mb-6">
+              Accede a todas las funcionalidades de ArmoniClick durante 15 días completamente gratis. Sin tarjeta de crédito requerida.
             </p>
 
             {/* Error Message */}
@@ -163,7 +163,7 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
                 onChange={handleChange}
                 placeholder="Juan"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition"
               />
             </div>
 
@@ -179,7 +179,7 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
                 onChange={handleChange}
                 placeholder="Pérez"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition"
               />
             </div>
 
@@ -195,47 +195,29 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
                 onChange={handleChange}
                 placeholder="tu@correo.com"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition"
               />
-            </div>
-
-            {/* Trial Days Select */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Duración de prueba
-              </label>
-              <select
-                name="trialDays"
-                value={formData.trialDays}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-white"
-              >
-                <option value={7}>7 días</option>
-                <option value={15}>15 días</option>
-                <option value={30}>30 días</option>
-                <option value={60}>60 días</option>
-              </select>
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-white py-3 rounded-xl font-bold hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
                   <Loader size={20} className="animate-spin" />
-                  Creando cuenta...
+                  Creando tu demo...
                 </>
               ) : (
-                'Crear cuenta de demostración'
+                'Comenzar mi demo de 15 días gratis'
               )}
             </button>
 
             {/* Footer */}
-            <p className="text-center text-gray-500 text-xs">
-              Al registrarte, aceptas nuestros términos de servicio y política de privacidad.
+            <p className="text-center text-slate-500 text-xs">
+              Tu demo incluye 15 días de acceso completo. Al registrarte, aceptas nuestros términos de servicio y política de privacidad.
             </p>
           </form>
         )}

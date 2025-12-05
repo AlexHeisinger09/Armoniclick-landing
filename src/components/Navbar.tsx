@@ -5,7 +5,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <nav className="fixed w-full bg-[#F2F1E7]/95 backdrop-blur-sm z-50 shadow-sm border-b border-cyan-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -15,16 +15,15 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-700 hover:text-blue-600 transition">Características</a>
-            <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition">Beneficios</a>
-            <a href="#pricing" className="text-gray-700 hover:text-blue-600 transition">Precios</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition">Testimonios</a>
+            <a href="#features" className="text-slate-700 hover:text-cyan-600 transition font-semibold">Características</a>
+            <a href="#benefits" className="text-slate-700 hover:text-cyan-600 transition font-semibold">Beneficios</a>
+            <a href="#pricing" className="text-slate-700 hover:text-cyan-600 transition font-semibold">Precios</a>
+            <a href="#testimonials" className="text-slate-700 hover:text-cyan-600 transition font-semibold">Testimonios</a>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition font-medium">Iniciar sesión</a>
-            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition">
+          <div className="hidden md:flex items-center">
+            <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]">
               Comenzar gratis
             </button>
           </div>
@@ -41,11 +40,11 @@ export function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-3">
-            <a href="#features" className="block text-gray-700 hover:text-blue-600 py-2">Características</a>
-            <a href="#benefits" className="block text-gray-700 hover:text-blue-600 py-2">Beneficios</a>
-            <a href="#pricing" className="block text-gray-700 hover:text-blue-600 py-2">Precios</a>
-            <a href="#testimonials" className="block text-gray-700 hover:text-blue-600 py-2">Testimonios</a>
-            <button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-2 rounded-lg hover:shadow-lg transition">
+            <a href="#features" className="block text-slate-700 hover:text-cyan-600 py-2 font-semibold">Características</a>
+            <a href="#benefits" className="block text-slate-700 hover:text-cyan-600 py-2 font-semibold">Beneficios</a>
+            <a href="#pricing" className="block text-slate-700 hover:text-cyan-600 py-2 font-semibold">Precios</a>
+            <a href="#testimonials" className="block text-slate-700 hover:text-cyan-600 py-2 font-semibold">Testimonios</a>
+            <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200">
               Comenzar gratis
             </button>
           </div>

@@ -2,6 +2,7 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './sections/Hero'
 import { Dashboard } from './sections/Dashboard'
 import { Features } from './sections/Features'
+import { MultiPlatform } from './sections/MultiPlatform'
 import { TargetAudience } from './sections/TargetAudience'
 import { HowItWorks } from './sections/HowItWorks'
 import { Benefits } from './sections/Benefits'
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <Dashboard />
       <Features />
+      <MultiPlatform />
       <TargetAudience />
       <HowItWorks />
       <Benefits />

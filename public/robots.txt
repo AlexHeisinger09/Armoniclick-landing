@@ -1,7 +1,32 @@
+# Robots.txt para ArmoniClick - Software para Dentistas
 # https://www.robotstxt.org/robotstxt.html
+
+# Permitir acceso a todos los bots
 User-agent: *
 Allow: /
+
+# Bloquear directorios administrativos y técnicos
 Disallow: /admin/
 Disallow: /.netlify/
+Disallow: /api/
+Disallow: /*.json$
 
+# Permitir explícitamente recursos importantes
+Allow: /letras.PNG
+Allow: /logoIco.ico
+Allow: /dentHero.png
+Allow: /*.css$
+Allow: /*.js$
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
 Sitemap: https://www.armoniclick.cl/sitemap.xml
