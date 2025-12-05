@@ -47,8 +47,8 @@ export function DemoSignUpModal({ isOpen, onClose }: DemoSignUpModalProps) {
 
     try {
       // Usar la URL del backend de ArmoniClick (ajusta según tu configuración)
-      // Nota: Usar www.armoniclick.cl para evitar redirects que rompen CORS preflight
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://www.armoniclick.cl/.netlify/functions'
+      // Nota: Usar app.armoniclick.cl para evitar redirects que rompen CORS preflight
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://app.armoniclick.cl/.netlify/functions'
 
       const payload = {
         name: formData.name.trim(),

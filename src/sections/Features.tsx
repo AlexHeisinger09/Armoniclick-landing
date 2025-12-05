@@ -1,36 +1,36 @@
-import { Calendar, Users, FileText, TrendingUp, Clock, Bell } from 'lucide-react'
+import { Calendar, Users, FileText, TrendingUp, Bell, FileSignature } from 'lucide-react'
 
 export function Features() {
   const features = [
     {
-      icon: Calendar,
-      title: 'Gestión de Citas',
-      description: 'Sistema de reservas inteligente con notificaciones automáticas y confirmación de pacientes.'
-    },
-    {
       icon: Users,
-      title: 'Base de Datos de Pacientes',
-      description: 'Manejo completo de perfiles de pacientes con historial médico y seguimiento.'
+      title: 'Gestión de Pacientes y Ficha Clínica',
+      description: 'Almacena historial completo, fotos de tratamientos de botox, ácido hialurónico y armonización facial. Todo en un solo lugar.'
     },
     {
       icon: FileText,
-      title: 'Documentos Digitales',
-      description: 'Genera, firma y gestiona documentos médicos con seguridad y conformidad legal.'
+      title: 'Generación de Presupuestos',
+      description: 'Crea, envía y administra presupuestos de tratamientos estéticos y odontológicos de forma sencilla y profesional.'
     },
     {
-      icon: TrendingUp,
-      title: 'Análisis y Reportes',
-      description: 'Dashboards intuitivos con métricas de desempeño y análisis de negocio.'
-    },
-    {
-      icon: Clock,
-      title: 'Control de Tratamientos',
-      description: 'Registro detallado de procedimientos con seguimiento de progreso y resultados.'
+      icon: Calendar,
+      title: 'Agenda de Citas',
+      description: 'Calendario fácil de usar con opción de agendar horas para procedimientos de estética facial y ver disponibilidad en tiempo real.'
     },
     {
       icon: Bell,
-      title: 'Sistema de Recordatorios',
-      description: 'Notificaciones automáticas por email y SMS para citas próximas.'
+      title: 'Recordatorios Automáticos',
+      description: 'Envía avisos automáticos por email y WhatsApp a tus pacientes sobre sus citas y seguimientos post-tratamiento.'
+    },
+    {
+      icon: FileSignature,
+      title: 'Consentimientos Informados Digitales',
+      description: 'Firma digital de consentimientos para botox, ácido hialurónico y procedimientos odontológicos con validez legal completa.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Reportes y Finanzas',
+      description: 'Panel de ingresos mensuales y seguimiento de tratamientos populares para optimizar tu consulta estética.'
     }
   ]
 
@@ -40,10 +40,10 @@ export function Features() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Características Poderosas
+            Funcionalidades Diseñadas para Dentistas
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Todo lo que necesitas para administrar tu clínica dental de manera eficiente
+            Todo lo que necesitas para administrar tu consulta de estética facial y odontología de manera profesional
           </p>
         </div>
 
@@ -54,10 +54,10 @@ export function Features() {
             return (
               <div
                 key={index}
-                className="group bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg hover:border-blue-200 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg hover:border-cyan-300 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-200 group-hover:to-cyan-200 transition">
-                  <Icon className="text-blue-600" size={28} />
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-200 group-hover:to-cyan-300 transition">
+                  <Icon className="text-cyan-600" size={28} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}

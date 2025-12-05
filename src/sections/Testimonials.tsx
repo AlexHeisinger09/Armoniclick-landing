@@ -4,44 +4,44 @@ export function Testimonials() {
   const testimonials = [
     {
       name: 'Dra. María González',
-      role: 'Odontóloga, Clínica Smile',
+      role: 'Odontóloga Especialista en Estética Facial',
       image: '👩‍⚕️',
-      content: 'ArmoniClick ha revolucionado mi consulta. Ahora administro todo desde mi teléfono y mis pacientes están más satisfechos con las notificaciones automáticas.',
+      content: 'ArmoniClick transformó mi consulta de estética facial. Gestiono todos mis pacientes de botox y ácido hialurónico con fichas detalladas y fotos. Los recordatorios automáticos por WhatsApp han reducido las inasistencias al mínimo.',
       rating: 5
     },
     {
       name: 'Dr. Carlos Rodríguez',
-      role: 'Director, Centro Dental Plus',
+      role: 'Dentista Independiente - Armonización Facial',
       image: '👨‍⚕️',
-      content: 'La mejor inversión que hice para mi clínica. Redujo mis costos administrativos en un 60% y aumentó la retención de pacientes significativamente.',
+      content: 'Como dentista independiente que realiza armonización facial, necesitaba un software específico. Con ArmoniClick puedo generar presupuestos profesionales y obtener firmas digitales en consentimientos. Mi consulta ahora es 100% digital.',
       rating: 5
     },
     {
       name: 'Dra. Laura Méndez',
-      role: 'Especialista, Clínica Dental Premier',
+      role: 'Especialista en Odontología y Estética Orofacial',
       image: '👩‍⚕️',
-      content: 'El sistema de documentos con firma digital es increíble. Mis pacientes pueden firmar desde casa y tengo todo registro digital. Muy profesional.',
+      content: 'La función de consentimientos informados digitales es espectacular. Mis pacientes firman antes de cada procedimiento de botox o ácido hialurónico, todo con validez legal. Además, puedo llevar el seguimiento fotográfico completo.',
       rating: 5
     },
     {
       name: 'Dr. Roberto Sáenz',
-      role: 'Propietario, Consultorio Dental Integral',
+      role: 'Odontólogo - Consulta Privada Estética Dental',
       image: '👨‍⚕️',
-      content: 'Excelente soporte técnico. Mi equipo aprendió a usar la plataforma en menos de una semana. Los reportes me ayudan a tomar mejores decisiones.',
+      content: 'El panel de reportes me permite saber exactamente qué tratamientos estéticos son más rentables. La agenda es súper intuitiva y los recordatorios por WhatsApp mantienen a mis pacientes informados. Mejor inversión para mi consulta.',
       rating: 5
     }
   ]
 
   return (
-    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Lo que Dicen Nuestros Clientes
+            Dentistas Independientes Confían en ArmoniClick
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Miles de profesionales odontológicos confían en ArmoniClick
+            Profesionales de estética facial y odontología que han transformado su consulta
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition"
+              className="bg-gray-50 rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-cyan-200 border-2 border-transparent transition"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
@@ -85,18 +85,18 @@ export function Testimonials() {
         </div>
 
         {/* Additional Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-8 sm:p-12 text-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl p-8 sm:p-12 text-white">
           <div className="text-center">
             <p className="text-3xl sm:text-4xl font-bold mb-2">4.9/5</p>
-            <p className="text-sm sm:text-base text-blue-100">Calificación promedio</p>
+            <p className="text-sm sm:text-base text-cyan-100">Calificación promedio</p>
           </div>
           <div className="text-center">
             <p className="text-3xl sm:text-4xl font-bold mb-2">500+</p>
-            <p className="text-sm sm:text-base text-blue-100">Clínicas activas</p>
+            <p className="text-sm sm:text-base text-cyan-100">Dentistas activos</p>
           </div>
           <div className="text-center">
             <p className="text-3xl sm:text-4xl font-bold mb-2">98%</p>
-            <p className="text-sm sm:text-base text-blue-100">Tasa de retención</p>
+            <p className="text-sm sm:text-base text-cyan-100">Satisfacción de clientes</p>
           </div>
         </div>
       </div>
