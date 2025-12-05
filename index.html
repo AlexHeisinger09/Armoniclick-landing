@@ -45,6 +45,97 @@
     <meta name="geo.region" content="CL" />
     <meta name="geo.placename" content="Chile" />
     <meta name="theme-color" content="#0EA5E9" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.armoniclick.cl/#organization",
+          "name": "ArmoniClick",
+          "url": "https://www.armoniclick.cl/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.armoniclick.cl/letras.PNG",
+            "width": 250,
+            "height": 60
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56-9-63107627",
+            "contactType": "customer service",
+            "availableLanguage": "Spanish",
+            "areaServed": "CL"
+          },
+          "sameAs": [
+            "https://www.armoniclick.cl/"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://www.armoniclick.cl/#software",
+          "name": "ArmoniClick",
+          "operatingSystem": "Web, iOS, Android",
+          "applicationCategory": "BusinessApplication",
+          "description": "Software de gestión integral para dentistas independientes. Administra pacientes, ficha clínica, agenda, presupuestos, botox, ácido hialurónico y armonización facial.",
+          "offers": {
+            "@type": "Offer",
+            "price": "19990",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.armoniclick.cl/#pricing"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "500"
+          },
+          "featureList": [
+            "Gestión completa de pacientes",
+            "Ficha clínica digital con fotos",
+            "Generación de presupuestos profesionales",
+            "Agenda de citas inteligente",
+            "Firma digital de documentos",
+            "Consentimientos informados digitales",
+            "Recordatorios automáticos vía correo",
+            "Panel de reportes y finanzas",
+            "Almacenamiento seguro en la nube"
+          ],
+          "screenshot": "https://www.armoniclick.cl/dentHero.png",
+          "creator": {
+            "@id": "https://www.armoniclick.cl/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.armoniclick.cl/#website",
+          "url": "https://www.armoniclick.cl/",
+          "name": "ArmoniClick - Software para Dentistas",
+          "description": "Software de gestión clínica dental y estética facial para dentistas independientes en Chile",
+          "publisher": {
+            "@id": "https://www.armoniclick.cl/#organization"
+          },
+          "inLanguage": "es-CL"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.armoniclick.cl/#webpage",
+          "url": "https://www.armoniclick.cl/",
+          "name": "ArmoniClick - Software para Dentistas | Gestión Clínica Dental y Estética Facial",
+          "isPartOf": {
+            "@id": "https://www.armoniclick.cl/#website"
+          },
+          "about": {
+            "@id": "https://www.armoniclick.cl/#organization"
+          },
+          "description": "Software de gestión integral para dentistas independientes. Administra pacientes, ficha clínica, agenda, presupuestos, botox, ácido hialurónico y armonización facial. Recordatorios automáticos vía correo.",
+          "inLanguage": "es-CL"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
