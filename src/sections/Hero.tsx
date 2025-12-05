@@ -1,31 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { DemoSignUpModal } from '../components/DemoSignUpModal'
 
 export function Hero() {
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      })
-    }
-
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  const isMobile = windowSize.width < 768
-  const isLandscape = windowSize.width > windowSize.height
-
-  const getBackgroundImage = () => {
-    if (isMobile && isLandscape) return 'url(/armoni-fondo-movil-landscape.webp)'
-    if (isMobile) return 'url(/armoni-fondo-movil.webp)'
-    return 'url(/armoni-fondo-triangu.webp)'
-  }
 
   return (
     <section
