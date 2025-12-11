@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { DemoSignUpModal } from '../components/DemoSignUpModal'
+import { CloudinaryImage } from '../components/CloudinaryImage'
 
 export function Hero() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -7,7 +8,7 @@ export function Hero() {
 
   return (
     <section
-      className="min-h-screen w-full relative overflow-hidden flex items-center justify-start"
+      className="h-screen w-full relative overflow-hidden flex items-center justify-start"
       style={{
         backgroundColor: '#F2F1E7'
       }}
@@ -24,42 +25,42 @@ export function Hero() {
         <div className="absolute bottom-1/3 left-1/3 w-18 h-18 rounded-full shadow-sm" style={{ background: 'radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.5), rgba(34, 211, 238, 0.15))' }}></div>
       </div>
 
-      <div className="relative z-10 px-3 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-12 sm:pb-20 w-full">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-6 w-full h-full flex items-center">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
             {/* Left Content - Texto */}
-            <div className="text-left">
-              <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/20 text-slate-700 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm border border-cyan-300">
+            <div className="text-left order-1">
+              <div className="inline-block mb-2 sm:mb-3 px-3 sm:px-4 py-1 sm:py-1.5 bg-cyan-500/20 text-slate-700 rounded-full text-xs sm:text-xs font-semibold backdrop-blur-sm border border-cyan-300">
                 ✨ Software líder para dentistas independientes
               </div>
 
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-700 mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-slate-700 mb-2 sm:mb-3 leading-tight">
                 Administra tu consulta estética y odontológica en un solo lugar
               </h1>
 
-              <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 mb-3 sm:mb-4 leading-relaxed">
                 Software diseñado para dentistas independientes: gestiona pacientes, ficha clínica, agenda, presupuestos, consentimientos informados, firma digital y recordatorios automáticos vía correo.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-start mb-8 sm:mb-12">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-start mb-3 sm:mb-6">
                 <button
                   onClick={() => setIsDemoModalOpen(true)}
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02] text-sm sm:text-lg"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 sm:px-10 py-2.5 sm:py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02] text-sm sm:text-lg"
                 >
                   Solicita tu demo
                 </button>
                 <a
                   href="#pricing"
-                  className="bg-white hover:bg-slate-50 text-cyan-600 border-2 border-cyan-500 px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02] text-sm sm:text-lg text-center"
+                  className="bg-white hover:bg-slate-50 text-cyan-600 border-2 border-cyan-500 px-6 sm:px-10 py-2.5 sm:py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02] text-sm sm:text-lg text-center"
                 >
                   Ver planes y suscribirse
                 </a>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 text-xs sm:text-sm text-slate-500 justify-start flex-wrap">
+              <div className="hidden sm:flex flex-col sm:flex-row items-start gap-4 sm:gap-8 text-xs sm:text-sm text-slate-500 justify-start flex-wrap">
                 <div className="text-left">
                   <p className="font-bold text-slate-700 text-base sm:text-lg">500+</p>
-                  <p>Profesionales dentales</p>
+                  <p>Dentistas independientes</p>
                 </div>
                 <div className="text-left">
                   <p className="font-bold text-slate-700 text-base sm:text-lg">50k+</p>
@@ -73,14 +74,15 @@ export function Hero() {
             </div>
 
             {/* Right Content - Imagen de dentista */}
-            <div className="hidden md:flex justify-center items-center">
-              <div className="relative">
-                <img
-                  src="/dentHero.png"
-                  alt="Dentista profesional ArmoniClick"
-                  className="w-full max-w-md h-auto object-contain drop-shadow-2xl"
-                />
-              </div>
+            <div className="flex justify-center items-center order-2 md:order-2 md:mt-16">
+              <CloudinaryImage
+                publicId="dentHero_wpaiyq.png"
+                alt="Dentista independiente usando ArmoniClick"
+                className="w-[200px] sm:w-[280px] md:w-[370px] h-auto object-contain drop-shadow-2xl"
+                width={370}
+                quality="auto:best"
+                eager={true}
+              />
             </div>
           </div>
         </div>

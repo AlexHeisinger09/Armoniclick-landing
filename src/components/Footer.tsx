@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
+import { CloudinaryImage } from './CloudinaryImage'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,7 +11,13 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img src="/letras.PNG" alt="ArmoniClick Logo" className="h-10 w-auto mb-2" />
+              <CloudinaryImage
+                publicId="LogpFooter_sey2zn.png"
+                alt="ArmoniClick Logo"
+                className="h-16 w-auto mb-2"
+                height={64}
+                quality="auto:best"
+              />
             </div>
             <p className="text-slate-400 font-medium">Gestión integral de clínicas dentales</p>
           </div>

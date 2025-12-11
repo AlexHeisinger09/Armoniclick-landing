@@ -49,7 +49,7 @@ export function Benefits() {
             Beneficios Comprobados
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Miles de dentistas ya confían en ArmoniClick para mejorar su práctica
+            Miles de dentistas ya confían en ArmoniClick para mejorar su consulta
           </p>
         </div>
 

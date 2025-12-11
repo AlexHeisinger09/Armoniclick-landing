@@ -31,8 +31,8 @@ export function CTA() {
             Comienza Hoy Mismo
           </h2>
           <p className="text-sm sm:text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            Únete a cientos de clínicas dentales que ya están transformando su práctica con ArmoniClick.
-            Primer mes gratis, sin tarjeta de crédito.
+            Únete a cientos de dentistas independientes que ya están transformando su consulta con ArmoniClick.
+            15 días de demo gratis, sin tarjeta de crédito.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-6">

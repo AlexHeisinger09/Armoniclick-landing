@@ -13,7 +13,7 @@ export function Testimonials() {
       name: 'Dr. Carlos Rodríguez',
       role: 'Dentista Independiente - Armonización Facial',
       image: '👨‍⚕️',
-      content: 'Como dentista independiente que realiza armonización facial, necesitaba un software específico. Con ArmoniClick puedo generar presupuestos profesionales y obtener firmas digitales en consentimientos. Mi consulta ahora es 100% digital.',
+      content: 'Como dentista independiente que realiza armonización facial, necesitaba un software específico. Con ArmoniClick puedo generar presupuestos y obtener firmas digitales en consentimientos. Mi consulta ahora es 100% digital.',
       rating: 5
     },
     {

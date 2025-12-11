@@ -10,7 +10,7 @@ export function Features() {
     {
       icon: FileText,
       title: 'Generación de Presupuestos',
-      description: 'Crea, envía y administra presupuestos de tratamientos estéticos y odontológicos de forma sencilla y profesional.'
+      description: 'Crea, envía y administra presupuestos de tratamientos estéticos y odontológicos de forma sencilla.'
     },
     {
       icon: Calendar,
@@ -50,7 +50,7 @@ export function Features() {
             Funcionalidades Diseñadas para Dentistas
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Todo lo que necesitas para administrar tu consulta de estética facial y odontología de manera profesional
+            Todo lo que necesitas para administrar tu consulta de estética facial y odontología
           </p>
         </div>
 

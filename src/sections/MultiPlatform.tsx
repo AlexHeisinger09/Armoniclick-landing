@@ -1,84 +1,62 @@
-import { Smartphone, Tablet, Laptop } from 'lucide-react'
+import { CloudinaryImage } from '../components/CloudinaryImage'
 
 export function MultiPlatform() {
-  const platforms = [
-    {
-      icon: Smartphone,
-      title: 'Móvil',
-      description: 'Gestiona tu consulta desde cualquier lugar con tu smartphone',
-      image: '/movil.png',
-      color: 'from-cyan-400 to-cyan-500'
-    },
-    {
-      icon: Tablet,
-      title: 'Tablet',
-      description: 'Experiencia optimizada para tablets, perfecta para la consulta',
-      image: '/tablet.png',
-      color: 'from-cyan-500 to-cyan-600'
-    },
-    {
-      icon: Laptop,
-      title: 'Computadora',
-      description: 'Acceso completo desde tu escritorio con todas las funcionalidades',
-      image: '/laptop.png',
-      color: 'from-cyan-600 to-cyan-700'
-    }
-  ]
-
   return (
     <section id="multiplatform" className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
-      {/* Burbujas decorativas */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-10 right-1/4 w-40 h-40 rounded-full shadow-lg" style={{ background: 'radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.5), rgba(34, 211, 238, 0.15))' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-32 h-32 rounded-full shadow-md" style={{ background: 'radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.55), rgba(34, 211, 238, 0.18))' }}></div>
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-700 mb-4">
-            Accede Desde Cualquier Dispositivo
+            Diseño 100% Responsive
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            ArmoniClick se adapta perfectamente a tu forma de trabajar. Usa tu celular, tablet o computadora sin problemas. Tu información siempre sincronizada en la nube.
+            Accede a tu consulta desde cualquier dispositivo: computadora, tablet o celular. Siempre con la misma potencia y facilidad de uso.
           </p>
         </div>
 
-        {/* Platforms Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {platforms.map((platform, index) => {
-            const Icon = platform.icon
-            return (
-              <div
-                key={index}
-                className="bg-[#F2F1E7] border-2 border-slate-300 rounded-2xl p-6 shadow-md hover:shadow-xl hover:border-cyan-400 transition-all duration-300 hover:-translate-y-1"
-              >
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${platform.color} rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md`}>
-                  <Icon className="text-white" size={32} />
-                </div>
+        {/* Main Content - Image Left, Text Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Image - Left */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative max-w-md w-full">
+              <CloudinaryImage
+                publicId="responsive_omnfu6.png"
+                alt="ArmoniClick responsive en todos los dispositivos - móvil, tablet y computadora"
+                className="w-full h-auto object-contain drop-shadow-2xl"
+                width={450}
+                quality="auto:best"
+              />
+            </div>
+          </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-slate-700 mb-4 text-center">
-                  {platform.title}
-                </h3>
+          {/* Text - Right con fondo beige */}
+          <div className="bg-[#F2F1E7] rounded-2xl p-8 space-y-6">
+            <h3 className="text-3xl font-bold text-slate-700">
+              Se adapta a cualquier pantalla
+            </h3>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              ArmoniClick se adapta perfectamente a cualquier dispositivo. Ya sea que uses tu computadora en la consulta, tu tablet durante las atenciones, o tu celular en movimiento, siempre tendrás la mejor experiencia.
+            </p>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Una interfaz intuitiva que se ajusta automáticamente a tu dispositivo, permitiéndote trabajar con comodidad desde donde estés.
+            </p>
 
-                {/* Image with border */}
-                <div className="mb-6 flex justify-center">
-                  <img
-                    src={platform.image}
-                    alt={`Dentista usando ArmoniClick en ${platform.title}`}
-                    className="w-full max-w-xs h-auto object-contain rounded-xl border-4 border-white shadow-lg"
-                  />
-                </div>
-
-                {/* Description */}
-                <p className="text-slate-600 text-center leading-relaxed font-medium">
-                  {platform.description}
-                </p>
+            {/* Key Points */}
+            <div className="space-y-3 pt-4">
+              <div className="flex items-start gap-3">
+                <span className="text-cyan-500 font-bold text-xl">✓</span>
+                <span className="text-slate-700 font-medium">Diseño adaptativo en tiempo real</span>
               </div>
-            )
-          })}
+              <div className="flex items-start gap-3">
+                <span className="text-cyan-500 font-bold text-xl">✓</span>
+                <span className="text-slate-700 font-medium">Optimizado para pantallas táctiles</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-cyan-500 font-bold text-xl">✓</span>
+                <span className="text-slate-700 font-medium">Misma funcionalidad en todos los dispositivos</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Feature Highlight */}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { CloudinaryImage } from './CloudinaryImage'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,7 +11,14 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/letras.PNG" alt="ArmoniClick Logo" className="h-10 w-auto" />
+            <CloudinaryImage
+              publicId="letras_z2vgw3.png"
+              alt="ArmoniClick Logo"
+              className="h-10 w-auto"
+              height={40}
+              quality="auto:best"
+              eager={true}
+            />
           </div>
 
           {/* Desktop Menu */}
@@ -24,7 +32,7 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-[1.02]">
-              Comenzar gratis
+              Suscribete Ahora!
             </button>
           </div>
 
@@ -45,7 +53,7 @@ export function Navbar() {
             <a href="#pricing" className="block text-slate-700 hover:text-cyan-600 py-2 font-semibold">Precios</a>
             <a href="#testimonials" className="block text-slate-700 hover:text-cyan-600 py-2 font-semibold">Testimonios</a>
             <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200">
-              Comenzar gratis
+              Suscribete Ahora!
             </button>
           </div>
         )}

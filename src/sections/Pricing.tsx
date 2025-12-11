@@ -4,7 +4,7 @@ export function Pricing() {
   const features = [
     'Gestión completa de pacientes',
     'Ficha clínica digital con fotos',
-    'Generación de presupuestos profesionales',
+    'Generación de presupuestos',
     'Agenda de citas inteligente',
     'Firma digital de documentos',
     'Consentimientos informados digitales',
@@ -42,7 +42,7 @@ export function Pricing() {
             </h3>
 
             <p className="text-slate-600 mb-8">
-              Todas las funciones incluidas para gestionar tu consulta estética y odontológica de forma profesional
+              Todas las funciones incluidas para gestionar tu consulta estética y odontológica
             </p>
 
             {/* Price */}

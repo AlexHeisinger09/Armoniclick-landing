@@ -14,6 +14,42 @@ export default {
       fontFamily: {
         sans: ['system-ui', '-apple-system', 'sans-serif'],
       },
+      animation: {
+        'spin-slow': 'spin 60s linear infinite',
+        'spin-reverse-slow': 'spin-reverse 60s linear infinite',
+        'slide-in-left': 'slideInLeft 1s ease-out forwards',
+        'slide-in-right': 'slideInRight 1s ease-out forwards',
+      },
+      keyframes: {
+        'spin-reverse': {
+          from: {
+            transform: 'rotate(360deg)'
+          },
+          to: {
+            transform: 'rotate(0deg)'
+          }
+        },
+        'slideInLeft': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-80px) rotate(-3deg)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0) rotate(-3deg)'
+          }
+        },
+        'slideInRight': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(80px) rotate(3deg)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0) rotate(3deg)'
+          }
+        }
+      }
     },
   },
   plugins: [],

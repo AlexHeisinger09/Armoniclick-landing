@@ -57,7 +57,7 @@ export function TargetAudience() {
               Consultas Privadas
             </h3>
             <p className="text-slate-600 text-center leading-relaxed font-medium">
-              Profesionales que atienden en consulta privada y buscan una herramienta profesional para gestionar pacientes, citas y finanzas.
+              Profesionales que atienden en consulta privada y buscan una herramienta completa para gestionar pacientes, citas y finanzas.
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export function TargetAudience() {
               Si trabajas fuera de clínicas grandes y necesitas organizar tu consulta...
             </h3>
             <p className="text-lg text-slate-600 mb-6 font-semibold">
-              ArmoniClick es la herramienta perfecta para llevar tu práctica profesional al siguiente nivel. Sin complicaciones, sin costos ocultos, sin largos contratos.
+              ArmoniClick es la herramienta perfecta para llevar tu consulta al siguiente nivel. Sin complicaciones, sin costos ocultos, sin largos contratos.
             </p>
             <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
               <span className="text-cyan-600 font-bold text-xl">¿Listo para empezar?</span>
