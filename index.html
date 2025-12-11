@@ -46,6 +46,23 @@
     <meta name="geo.placename" content="Chile" />
     <meta name="theme-color" content="#0EA5E9" />
 
+    <!-- Performance Optimizations -->
+    <!-- Preconnect to Cloudinary for faster image loading -->
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+
+    <!-- Preload LCP image (Hero image) with high priority -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://res.cloudinary.com/dafeskzbp/image/upload/f_auto,q_auto:best,w_370/dentHero_wpaiyq.png"
+      fetchpriority="high"
+      imagesrcset="https://res.cloudinary.com/dafeskzbp/image/upload/f_auto,q_auto:best,w_200/dentHero_wpaiyq.png 200w,
+                   https://res.cloudinary.com/dafeskzbp/image/upload/f_auto,q_auto:best,w_280/dentHero_wpaiyq.png 280w,
+                   https://res.cloudinary.com/dafeskzbp/image/upload/f_auto,q_auto:best,w_370/dentHero_wpaiyq.png 370w"
+      imagesizes="(max-width: 640px) 200px, (max-width: 768px) 280px, 370px"
+    />
+
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {

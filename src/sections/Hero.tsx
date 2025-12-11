@@ -82,6 +82,7 @@ export function Hero() {
                 width={370}
                 quality="auto:best"
                 eager={true}
+                fetchPriority="high"
               />
             </div>
           </div>
